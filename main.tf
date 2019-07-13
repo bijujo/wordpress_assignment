@@ -1,4 +1,4 @@
-# Master scipt for VPC setup
+# Master scipt for VPC/Subnet/SG setup
 
 terraform {
   backend "s3" {
@@ -28,6 +28,7 @@ resource "aws_vpc" "vpc" {
   }
 }
 
+# IG
 resource "aws_internet_gateway" "igw" {
   vpc_id = "${aws_vpc.vpc.id}"
 
@@ -36,6 +37,7 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
+# Subnet
 resource "aws_subnet" "subnet_public" {
   vpc_id                  = "${aws_vpc.vpc.id}"
   cidr_block              = "${var.cidr_subnet}"
@@ -47,6 +49,7 @@ resource "aws_subnet" "subnet_public" {
   }
 }
 
+# SG
 resource "aws_security_group" "cm_sg" {
   name   = "cm_sg"
   vpc_id = "${aws_vpc.vpc.id}"
@@ -87,6 +90,7 @@ resource "aws_security_group" "cm_sg" {
   }
 }
 
+# Route Table
 resource "aws_route_table" "route_public" {
   vpc_id = "${aws_vpc.vpc.id}"
 
@@ -100,6 +104,7 @@ resource "aws_route_table" "route_public" {
   }
 }
 
+# Route Table Association
 resource "aws_route_table_association" "rta_subnet_public" {
   subnet_id      = "${aws_subnet.subnet_public.id}"
   route_table_id = "${aws_route_table.route_public.id}"
