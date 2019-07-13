@@ -59,7 +59,6 @@ Outputs:
 Wordpress_Instance_Public_IP = [
    <Public_IP_of_Instance> 
 ]
-You have mail in /var/spool/mail/ec2-user
 $
 
 ```
