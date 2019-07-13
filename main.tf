@@ -2,8 +2,8 @@
 
 terraform {
   backend "s3" {
-    bucket                      = "wordpress-tf-state"
-    key                         = "wordpress-tf-state/terraform.tfstate"
+    bucket                      = "wordpress-tfstate"
+    key                         = "wordpress-tfstate/terraform.tfstate"
     region                      = "us-west-2"
     skip_credentials_validation = true
   }
