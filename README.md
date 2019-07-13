@@ -18,7 +18,8 @@ Deploys WordPress in AWS using Terraform and Chef
 -  Recipes also create wordpress db, set root password for mariadb and configure wordpress config file for DB connection.
 
 ## Sample run
-`
+```
+
 $ terraform apply
 var.aws_access_key
   Enter a value: 
@@ -36,11 +37,11 @@ data.template_file.user_data_file: Refreshing state...
 
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
-  \+ create
+  + create
 
 Terraform will perform the following actions:
 
-  \+ aws_instance.wordpress_ec2
+  + aws_instance.wordpress_ec2
       id:                                          <computed>
       ami:                                         "ami-0a7e1ebfee7a4570e"
       arn:                                         <computed>
@@ -60,4 +61,5 @@ Wordpress_Instance_Public_IP = [
 ]
 You have mail in /var/spool/mail/ec2-user
 $
-`
+
+```
