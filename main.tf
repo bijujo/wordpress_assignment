@@ -1,6 +1,13 @@
-# Install CM EC2 instance
+# Master scipt for VPC setup
 
-terraform {}
+terraform {
+  backend "s3" {
+    bucket                      = "wordpress-tf-state"
+    key                         = "wordpress-tf-state/terraform.tfstate"
+    region                      = "us-west-2"
+    skip_credentials_validation = true
+  }
+}
 
 # AWS Provider
 
