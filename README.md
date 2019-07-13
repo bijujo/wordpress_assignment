@@ -36,11 +36,11 @@ data.template_file.user_data_file: Refreshing state...
 
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
-  + create
+  \+ create
 
 Terraform will perform the following actions:
 
-  + aws_instance.wordpress_ec2
+  \+ aws_instance.wordpress_ec2
       id:                                          <computed>
       ami:                                         "ami-0a7e1ebfee7a4570e"
       arn:                                         <computed>
