@@ -22,10 +22,10 @@ Deploys WordPress in AWS using Terraform and Chef
 
 $ terraform apply
 var.aws_access_key
-  Enter a value: 
+  Enter a value: XXXXXXXXXX
 
 var.aws_secret_key
-  Enter a value: 
+  Enter a value: XXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
@@ -63,3 +63,10 @@ You have mail in /var/spool/mail/ec2-user
 $
 
 ```
+
+## References
+
+https://www.terraform.io/intro/index.html
+
+https://www.chef.io/
+
