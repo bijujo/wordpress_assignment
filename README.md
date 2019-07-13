@@ -17,6 +17,13 @@ Deploys WordPress in AWS using Terraform and Chef
 -  Chef-solo executes all recipes specified in the run list
 -  Recipes also create wordpress db, set root password for mariadb and configure wordpress config file for DB connection.
 
+## Prerequisites
+
+-  Download latest version of terraform executable to the workstation/server from where you plan to execute the script
+-  Install AWS CLI and configure credentials using "aws configure". Credentials are needed for terraform to initialize s3 backend
+-  git clone the repo
+-  terraform init, plan, apply
+
 ## Sample run
 ```
 
