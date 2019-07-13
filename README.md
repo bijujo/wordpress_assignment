@@ -50,7 +50,7 @@ Terraform will perform the following actions:
 << OUTPUT TRUNCATED >>
 
 aws_instance.wordpress_ec2: Still creating... (30s elapsed)
-aws_instance.wordpress_ec2: Creation complete after 35s (ID: i-036d56f2eef12e15a)
+aws_instance.wordpress_ec2: Creation complete after 35s (ID: <instance_id>)
 
 Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
 
