@@ -10,7 +10,7 @@ resource "aws_instance" "wordpress_ec2" {
   key_name               = "${var.key}"
   user_data              = "${data.template_file.user_data_file.rendered}"
 
-  tags {
-    "Name" = "Wordpress"
+  tags = {
+    Name = "${var.app_name}"
   }
 }

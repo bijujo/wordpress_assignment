@@ -16,16 +16,16 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
   enable_dns_hostnames = true
 
-  tags {
-    "Name" = "${var.app_name}"
+  tags = {
+    Name = "${var.app_name}"
   }
 }
 
 resource "aws_internet_gateway" "igw" {
   vpc_id = "${aws_vpc.vpc.id}"
 
-  tags {
-    "Name" = "${var.app_name}"
+  tags = {
+    Name = "${var.app_name}"
   }
 }
 
@@ -35,8 +35,8 @@ resource "aws_subnet" "subnet_public" {
   map_public_ip_on_launch = "true"
   availability_zone       = "${var.availability_zone}"
 
-  tags {
-    "Name" = "${var.app_name}"
+  tags = {
+    Name = "${var.app_name}"
   }
 }
 
@@ -75,8 +75,8 @@ resource "aws_security_group" "cm_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
-    "Name" = "${var.app_name}"
+  tags = {
+    Name = "${var.app_name}"
   }
 }
 
@@ -88,8 +88,8 @@ resource "aws_route_table" "route_public" {
     gateway_id = "${aws_internet_gateway.igw.id}"
   }
 
-  tags {
-    "Name" = "${var.app_name}"
+  tags = {
+    Name = "${var.app_name}"
   }
 }
 

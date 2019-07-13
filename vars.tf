@@ -10,7 +10,7 @@ variable "availability_zone" {
 }
 
 variable "app_name" {
-  default = "wordpress"
+  default = "WordPress"
 }
 
 variable "cidr_vpc" {
